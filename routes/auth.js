@@ -5,10 +5,10 @@ var db = require('../db');
 
 
 passport.use(new OpenIDConnectStrategy({
-  issuer: 'https://server.example.com',
-  authorizationURL: 'https://server.example.com/authorize',
-  tokenURL: 'https://server.example.com/token',
-  userInfoURL: 'https://server.example.com/userinfo',
+  issuer: 'https://' + process.env['AUTH0_DOMAIN'] + '/',
+  authorizationURL: 'https://' + process.env['AUTH0_DOMAIN'] + '/authorize',
+  tokenURL: 'https://' + process.env['AUTH0_DOMAIN'] + '/oauth/token',
+  userInfoURL: 'https://' + process.env['AUTH0_DOMAIN'] + '/userinfo',
   clientID: process.env['CLIENT_ID'],
   clientSecret: process.env['CLIENT_SECRET'],
   callbackURL: '/oauth2/redirect',
