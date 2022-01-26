@@ -24,8 +24,8 @@ Once the client ID and secret have been obtained, create a `.env` file and add
 the following environment variables:
 
 ```
-CLIENT_ID=__INSERT_CLIENT_ID_HERE__
-CLIENT_SECRET=__INSERT_CLIENT_SECRET_HERE__
+AUTH0_CLIENT_ID=__INSERT_CLIENT_ID_HERE__
+AUTH0_CLIENT_SECRET=__INSERT_CLIENT_SECRET_HERE__
 ```
 
 Start the server.
