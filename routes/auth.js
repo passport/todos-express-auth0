@@ -13,8 +13,7 @@ passport.use(new OpenIDConnectStrategy({
   clientSecret: process.env['AUTH0_CLIENT_SECRET'],
   callbackURL: '/oauth2/redirect',
   scope: [ 'profile' ]
-},
-function verify(issuer, profile, cb) {
+}, function verify(issuer, profile, cb) {
   return cb(null, profile);
 }));
 
