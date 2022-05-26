@@ -36,27 +36,32 @@ Navigate to [`http://localhost:3000`](http://localhost:3000).
 
 ## Tutorial
 
-Follow along with the step-by-step [Auth0 Integration Tutorial](https://www.passportjs.org/tutorials/auth0/)
+Follow along with the step-by-step [Auth0 Tutorial](https://www.passportjs.org/tutorials/auth0/)
 to learn how this app was built.
 
 ## Overview
 
-This example illustrates how to use Passport and the [`passport-openidconnect`](https://www.passportjs.org/packages/passport-openidconnect/)
-strategy within an Express application to sign users in via Auth0 using OpenID
-Connect.
+This app illustrates how to build a todo app with sign in functionality using
+Express, Passport, Auth0, and the [`passport-openidconnect`](https://www.passportjs.org/packages/passport-openidconnect/)
+strategy.
 
-This app implements the features of a typical [TodoMVC](https://todomvc.com/)
-app, and adds sign in functionality.  This app is a traditional web application,
-in which all application logic and data persistence is handled on the server.
+This app is a traditional web application, in which application logic and data
+persistence resides on the server.  HTML pages and forms are rendered by the
+server and client-side JavaScript is not utilized (or kept to a minimum).
 
-User interaction is performed via HTML pages and forms, which are rendered via
-[EJS](https://ejs.co/) templates and styled with vanilla CSS.  Data is stored in
-and queried from a [SQLite](https://www.sqlite.org/) database.
+This app is built using the Express web framework.  Data is persisted to a
+[SQLite](https://www.sqlite.org/) database.  HTML pages are rendered using [EJS](https://ejs.co/)
+templates, and are styled using vanilla CSS.
 
-After users sign in, a login session is established and maintained between the
-server and the browser with a cookie.  As authenticated users interact with the
-app, creating and editing todo items, the login state is restored by
-authenticating the session.
+When a user first arrives at this app, they are prompted to sign in.  To sign
+in, the user is redirected to our app's sign in page (which is hosted by Auth0)
+using OpenID Connect.  Once authenticated, a login session is established and
+maintained between the server and the user's browser with a cookie.
+
+After signing in, the user can view, create, and edit todo items.  Interaction
+occurs by clicking links and submitting forms, which trigger HTTP requests.
+The browser automatically includes the cookie set during login with each of
+these requests.
 
 ## License
 
