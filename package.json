@@ -2,7 +2,7 @@
   "name": "todos-express-auth0",
   "version": "0.0.0",
   "private": true,
-  "description": "Todo app using Auth0, Express, Passport, and SQLite for sign in via OpenID Connect.",
+  "description": "Todo app using Express, Passport, and Auth0 for sign in via OpenID Connect.",
   "keywords": [
     "example",
     "auth0",
